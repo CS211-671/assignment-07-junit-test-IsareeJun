@@ -44,7 +44,8 @@ class StudentTest {
     @Test
     @DisplayName("เทส getScore")
     void testGetScore(){
-        assertEquals(0, s1.getScore());
+        s1.addScore(40.5);
+        assertEquals(40.5, s1.getScore());
     }
 
     @Test
@@ -54,4 +55,15 @@ class StudentTest {
         assertEquals("fif", s1.getName());
     }
 
+    @Test
+    @DisplayName("เทส getId")
+    void testGetId(){
+        assertEquals("6610451257", s1.getId());
+    }
+
+    @Test
+    @DisplayName("เทส isId")
+    void testIsId(){
+        assertTrue(s1.isId(s1.getId()));
+    }
 }
